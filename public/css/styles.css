@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+  }
+  
+  header, nav, footer {
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+  }
+  
+  .upgrades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  figure {
+    background: #00aaff;
+    padding: 1rem;
+    color: white;
+  }
+  
+  figcaption {
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive for larger screens */
+  @media (min-width: 768px) {
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+  
+    .upgrades {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+        justify-items: center;
+        padding: 0 1rem;
+    }
+  }
+  .upgrades img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+  .upgrades figure {
+    width: 100%;
+    max-width: 140px;
+    background-color: #00aaff;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+  }
+  
