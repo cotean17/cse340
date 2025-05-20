@@ -51,9 +51,11 @@ body {
   
   .upgrades {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; /* change from 1fr 1fr */
     gap: 1rem;
     margin-top: 1rem;
+    justify-items: center;
+    padding: 0 1rem;
   }
   
   figure {
@@ -68,9 +70,8 @@ body {
   
   /* Responsive for larger screens */
   @media (min-width: 768px) {
-    nav ul {
-      flex-direction: row;
-      justify-content: center;
+    .upgrades {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
   
     main {
@@ -98,7 +99,7 @@ body {
   .upgrades figure {
     width: 100%;
     max-width: 140px;
-    background-color: #00aaff;
+    background-color: #0077cc;
     padding: 1rem;
     color: white;
     text-align: center;
