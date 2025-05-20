@@ -8,7 +8,7 @@ body {
   
   header, nav, footer {
     padding: 1rem;
-    background-color: #222;
+    background-color: #000000;
     color: white;
     text-align: center;
   }
@@ -19,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    color:#fff
   }
   
   nav ul li a {
@@ -106,4 +107,5 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
   }
+
   
