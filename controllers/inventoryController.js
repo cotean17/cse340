@@ -1,4 +1,4 @@
-const invModel = require("../../database/models/inventory-model");
+const invModel = require("../database/models/inventory-model");
 const utilities = require("../utilities");
 
 const invCont = {};
