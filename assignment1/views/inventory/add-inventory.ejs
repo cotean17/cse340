@@ -1,0 +1,49 @@
+<%- include("../partials/head") %>
+<%- include("../partials/header") %>
+<%- include("../partials/navigation") %>
+
+<main>
+  <h1>Add New Vehicle</h1>
+  <% if (typeof message !== "undefined") { %>
+    <p class="notice"><%= message %></p>
+  <% } %>
+  <form action="/inv/add-inventory" method="post">
+    <label for="classification_id">Classification:</label>
+    <select id="classification_id" name="classification_id" required>
+      <% classifications.forEach(class => { %>
+        <option value="<%= class.classification_id %>"><%= class.classification_name %></option>
+      <% }) %>
+    </select>
+
+    <label for="inv_make">Make:</label>
+    <input type="text" name="inv_make" required>
+
+    <label for="inv_model">Model:</label>
+    <input type="text" name="inv_model" required>
+
+    <label for="inv_year">Year:</label>
+    <input type="number" name="inv_year" required>
+
+    <label for="inv_description">Description:</label>
+    <textarea name="inv_description" required></textarea>
+
+    <label for="inv_image">Image Path:</label>
+    <input type="text" name="inv_image" value="/images/vehicles/no-image.png" required>
+
+    <label for="inv_thumbnail">Thumbnail Path:</label>
+    <input type="text" name="inv_thumbnail" value="/images/vehicles/no-image.png" required>
+
+    <label for="inv_price">Price:</label>
+    <input type="number" name="inv_price" step="0.01" required>
+
+    <label for="inv_miles">Miles:</label>
+    <input type="number" name="inv_miles" required>
+
+    <label for="inv_color">Color:</label>
+    <input type="text" name="inv_color" required>
+
+    <button type="submit">Add Vehicle</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>
